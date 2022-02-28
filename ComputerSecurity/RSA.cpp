@@ -18,22 +18,23 @@ int main() {
     /* Prompt the user to enter the value of n, obtained in Step 1 */
     /* Assign n to a variable */
     int n = 0;
-    scanf("Please enter the n value: %d", &n);
+    cout << "Input the value of n:";
+    cin >> n;
+    int p = 0;
+    int q = 0; 
     
     //"140737488355327" is the end of memory address.
     while (Temp != 140737488355327) {
-        ReadProcessMemory(pHandle, (LPVOID)Temp, &NumValue, sizeof(NumValue), 0);
-        int p = 0;
-        int q = 0; 
+        ReadProcessMemory(pHandle, (LPVOID)Temp, &NumValue, sizeof(NumValue), 0); 
         /* NumValue is the value read from a memory address */
         /* Check and print out the values that can be p or q such that n = pq */
          if(n%NumValue == 0){
-             if(p!=0){
+            if(p!=0){
                 p = NumValue;
-                printf("The p value is: %d", p);
+                cout << "The p-value is " << p;
             }else{
                 q = NumValue;
-                printf("The p value is: %d", q);
+                cout << "The p-value is " << q;
             }
         }
         Temp += 1;
