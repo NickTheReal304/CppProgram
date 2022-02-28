@@ -28,15 +28,10 @@ int main() {
         ReadProcessMemory(pHandle, (LPVOID)Temp, &NumValue, sizeof(NumValue), 0); 
         /* NumValue is the value read from a memory address */
         /* Check and print out the values that can be p or q such that n = pq */
-         if(n%NumValue == 0){
-            if(p!=0){
-                p = NumValue;
-                cout << "The p-value is " << p;
-            }else{
-                q = NumValue;
-                cout << "The p-value is " << q;
-            }
+        if(n % NumValue == 0){ 
+            cout << "The p-value is " << p;  
         }
+
         Temp += 1;
     }
     system("pause");
