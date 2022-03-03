@@ -38,7 +38,7 @@ int main()
             /* The GCD */
             cout << "GCD is " << B3;
             // The inverse of e
-            cout << "The d value equal to " << B2 << ".";
+            cout << " The d value equal to " << B2 << ".";
             break;
         }
         /* Quotient */
