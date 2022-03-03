@@ -38,7 +38,6 @@ int main()
             int n = 0;
             cout << "Input the value of n: ";
             cin >> n;
-            
             //"140737488355327" is the end of memory address.
             while (Temp != 140737488355327)
             {
@@ -50,6 +49,7 @@ int main()
                     /* If NumValue can be divisible by n */
                     if ((n % NumValue) == 0)
                     {
+                        /* Print the Number Value */
                         cout << "The value: " << NumValue << endl;
                         Sleep(100);
                     }
