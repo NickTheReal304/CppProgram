@@ -12,8 +12,8 @@ int main(int argc, char* argv[]){
     int block[4];
 
     for(int i=0; i<4; i++){
-        block[i] = argv[i+1][0];
-        //printf("The block = %d\n", block[i]);
+        block[i] = argv[i+1][0] - 48;
+        printf("The block = %d\n", block[i]);
     }
     
     block[0] += block[1];
